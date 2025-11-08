@@ -10,6 +10,7 @@
       <!--Begin col-->
       <div class="column">
         <pre id="bookings"></pre>
+
       </div>
       <!--End col-->
 
@@ -34,6 +35,7 @@
 <!-- Add your code inside the script tags below  -->
 <script>
 
+
   const bookings = JSON.parse('{{ bookings|safe }}');
 
   console.log(bookings);
@@ -41,6 +43,8 @@
   const pretty_json = JSON.stringify(bookings, null, 2);
 
   console.log(pretty_json)
+
+  document.getElementById('bookings').textContent = pretty_json;
 
 
 </script>
